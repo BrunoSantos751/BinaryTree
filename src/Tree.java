@@ -52,11 +52,11 @@ public class Tree {
     }
 
     private void InOrderMethod(Node node, List<Float> results){
-
-
-
+        if (node != null){
+            InOrderMethod(node.getLeft(),results);
+            results.add(node.getData());
+            InOrderMethod(node.getRight(),results);
+        }
     }
-
-
 
 }
