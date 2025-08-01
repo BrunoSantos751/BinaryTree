@@ -6,6 +6,13 @@ public class Main {
 
         tree.add(22);
         tree.add(19);
+        tree.add(23);
+        tree.add(15);
+        tree.add(14);
+        tree.add(10);
+        tree.add(9);
+        tree.add(30);
+
 
         Node root = tree.getRoot();
         /*
@@ -14,7 +21,9 @@ public class Main {
         Node child2 = child.getLeft();
         System.out.println(child2.getData());
          */
-        float [] result = tree.InOrder();
-        System.out.println(Arrays.toString(result));
+        float [] resultInOnrder = tree.InOrder();
+        float [] resultPreOrder = tree.PreOrder();
+        System.out.println(Arrays.toString(resultInOnrder));
+        System.out.println(Arrays.toString(resultPreOrder));
     }
 }

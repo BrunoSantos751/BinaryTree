@@ -59,4 +59,23 @@ public class Tree {
         }
     }
 
+    public float[] PreOrder() {
+        List<Float> results = new ArrayList<>();
+        PreOrderMethod(root, results);
+        float[] finalResults = new float[results.size()];
+        for (int i = 0; i < results.size(); i++) {
+            finalResults[i] = results.get(i);
+        }
+        return finalResults;
+    }
+
+    private void PreOrderMethod(Node node, List<Float> results){
+        if (node != null){
+            results.add(node.getData());
+            PreOrderMethod(node.getLeft(),results);
+            PreOrderMethod(node.getRight(),results);
+        }
+    }
+
+
 }
