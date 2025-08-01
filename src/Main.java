@@ -23,7 +23,9 @@ public class Main {
          */
         float [] resultInOnrder = tree.InOrder();
         float [] resultPreOrder = tree.PreOrder();
+        float [] resultPosOrder = tree.PosOrder();
         System.out.println(Arrays.toString(resultInOnrder));
         System.out.println(Arrays.toString(resultPreOrder));
+        System.out.println(Arrays.toString(resultPosOrder));
     }
 }

@@ -77,5 +77,23 @@ public class Tree {
         }
     }
 
+    public float[] PosOrder() {
+        List<Float> results = new ArrayList<>();
+        PosOrderMethod(root, results);
+        float[] finalResults = new float[results.size()];
+        for (int i = 0; i < results.size(); i++) {
+            finalResults[i] = results.get(i);
+        }
+        return finalResults;
+    }
+    private void PosOrderMethod(Node node, List<Float> results){
+        if (node != null){
+            PosOrderMethod(node.getLeft(),results);
+            PosOrderMethod(node.getRight(),results);
+            results.add(node.getData());
+        }
+    }
+
+
 
 }
