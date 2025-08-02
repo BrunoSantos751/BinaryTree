@@ -12,10 +12,10 @@ public class Main {
         tree.add(10);
         tree.add(9);
         tree.add(30);
+        tree.add(20);
 
-
-        Node root = tree.getRoot();
         /*
+        Node root = tree.getRoot();
         Node child = root.getLeft();
         System.out.println(child.getData());
         Node child2 = child.getLeft();
@@ -27,5 +27,7 @@ public class Main {
         System.out.println(Arrays.toString(resultInOnrder));
         System.out.println(Arrays.toString(resultPreOrder));
         System.out.println(Arrays.toString(resultPosOrder));
+        System.out.println("----------------------------------------------------------------");
+        tree.TreeView();
     }
 }

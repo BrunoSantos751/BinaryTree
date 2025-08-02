@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tree {
-    private Node root;
+    private final Node root;
 
     public Tree(float data) {
         this.root = new Node(data);
@@ -12,9 +12,8 @@ public class Tree {
         return root;
     }
 
-    public String add(float data){
+    public void add(float data){
         addNo(root, data);
-        return "Node added succesfully";
 
 
     }
@@ -92,6 +91,21 @@ public class Tree {
             PosOrderMethod(node.getRight(),results);
             results.add(node.getData());
         }
+    }
+
+    public  void TreeView(){
+        Visualize(root,0);
+
+    }
+
+    private void Visualize(Node node, int level){
+        if (node != null){
+            Visualize(node.getRight(), level + 1);
+            System.out.println("    ".repeat(level) + node.getData());
+            Visualize(node.getLeft(), level+1);
+        }
+
+
     }
 
 
