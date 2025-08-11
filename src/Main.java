@@ -14,13 +14,6 @@ public class Main {
         tree.add(30);
         tree.add(20);
 
-        /*
-        Node root = tree.getRoot();
-        Node child = root.getLeft();
-        System.out.println(child.getData());
-        Node child2 = child.getLeft();
-        System.out.println(child2.getData());
-         */
         float [] resultInOnrder = tree.InOrder();
         float [] resultPreOrder = tree.PreOrder();
         float [] resultPosOrder = tree.PosOrder();
